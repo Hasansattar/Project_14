@@ -1,0 +1,30 @@
+type Lolly {
+  id: ID!
+  c1: String!
+  c2: String!
+  c3: String!
+  rec: String!
+  sennder: String!
+  msg: String!
+  link: String!
+}
+
+input LollyInput {
+  id: ID!
+  c1: String!
+  c2: String!
+  c3: String!
+  rec: String!
+  sennder: String!
+  msg: String!
+  link: String!
+}
+
+type Query {
+  getLolly: [Lolly]
+}
+
+type Mutation {
+  addLolly(lollys: LollyInput!): Lolly
+ 
+}
