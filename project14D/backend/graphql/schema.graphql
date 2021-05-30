@@ -1,0 +1,18 @@
+type PetTest {
+  id: ID!
+  name: String!
+  report: String!
+}
+
+type Query {
+  getPetTest: [PetTest]
+}
+
+input Inputpet {
+  name: String!
+  report: String!
+}
+
+type Mutation {
+  addPet(pet:Inputpet): PetTest
+}
